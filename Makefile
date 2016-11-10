@@ -2,7 +2,8 @@ PACKAGES = prometheus \
 alertmanager \
 node_exporter \
 mysqld_exporter \
-blackbox_exporter
+blackbox_exporter \
+graphite_exporter
 
 NEXUS_URL = http://admin:admin123@sjc-engfrslv-08.eng.ssnsgs.net:8081/content/repositories/slv-rpm
 
@@ -54,6 +55,15 @@ publish:
 		-DrepositoryId=nexus \
 		-Durl=${NEXUS_URL} \
 		-Dfile=${PWD}/_dist/mysqld_exporter-0.9.0-2.el7.centos.x86_64.rpm
+	mvn deploy:deploy-file \
+		-DgroupId=com.slv \
+		-DartifactId=slv-graphite_exporter \
+		-Dversion=0.1 \
+		-DgeneratePom=true \
+		-Dpackaging=rpm \
+		-DrepositoryId=nexus \
+		-Durl=${NEXUS_URL} \
+		-Dfile=${PWD}/_dist/graphite_exporter-0.1.0-2.el7.centos.x86_64.rpm
 
 clean:
 	rm -rf _dist
