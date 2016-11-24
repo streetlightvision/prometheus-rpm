@@ -1,0 +1,15 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=A server that accepts collectd stats via HTTP POST and exports them via HTTP for Prometheus consumption
+Documentation=https://github.com/prometheus/collectd_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/collectd_exporter
+User=prometheus
+ExecStart=/usr/bin/collectd_exporter $COLLECTD_EXPORTER_OPTS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
