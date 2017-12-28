@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:    mysqld_exporter
-Version: 0.9.0
+Version: 0.10.0
 Release: 2%{?dist}
 Summary: Prometheus exporter for MySQL server metrics.
 License: ASL 2.0

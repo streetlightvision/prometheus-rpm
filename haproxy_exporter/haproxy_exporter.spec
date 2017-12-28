@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:    haproxy_exporter
-Version: 0.7.1
+Version: 0.8.0
 Release: 2%{?dist}
 Summary: Simple server that scrapes HAProxy stats and exports them via HTTP for Prometheus consumption.
 License: ASL 2.0
-URL:     https://github.com/prometheus/haproxy_exporter
+URL:     https://github.com/bobuss/haproxy_exporter
 
-Source0: https://github.com/prometheus/haproxy_exporter/releases/download/v%{version}/haproxy_exporter-%{version}.linux-amd64.tar.gz
+Source0: https://github.com/bobuss/haproxy_exporter/releases/download/v%{version}.bobuss/haproxy_exporter-%{version}.bobuss.linux-amd64.tar.gz
 Source1: haproxy_exporter.service
 Source2: haproxy_exporter.default
 

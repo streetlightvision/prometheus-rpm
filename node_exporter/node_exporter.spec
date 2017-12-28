@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:    node_exporter
-Version: 0.12.0
+Version: 0.15.2
 Release: 2%{?dist}
 Summary: Prometheus exporter for machine metrics, written in Go with pluggable metric collectors.
 License: ASL 2.0
 URL:     https://github.com/prometheus/node_exporter
 
-Source0: https://github.com/prometheus/node_exporter/releases/download/%{version}/node_exporter-%{version}.linux-amd64.tar.gz
+Source0: https://github.com/prometheus/node_exporter/releases/download/v%{version}/node_exporter-%{version}.linux-amd64.tar.gz
 Source1: node_exporter.service
 Source2: node_exporter.default
 

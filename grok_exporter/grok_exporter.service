@@ -1,0 +1,15 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=Export Prometheus metrics from arbitrary unstructured log data.
+Documentation=https://github.com/fstab/grok_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/grok_exporter
+User=prometheus
+ExecStart=/usr/bin/grok_exporter $GROK_EXPORTER_OPTS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

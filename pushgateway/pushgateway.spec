@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:    pushgateway
-Version: 0.3.1
+Version: 0.4.0
 Release: 2%{?dist}
 Summary: Push acceptor for ephemeral and batch jobs
 License: ASL 2.0
